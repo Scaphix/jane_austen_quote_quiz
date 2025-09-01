@@ -129,3 +129,17 @@ input, select {
   background: linear-gradient(to right, #f7cfcf, #ebbaba);
   transform: translateY(-2px);
 }
+
+.options button.correct {
+  background: #cde9d6;  /* soft green */
+  border: 2px solid #5a8f64;
+  color: #2f5132;
+  transition: background-color 0.5s ease;
+}
+
+.options button.wrong {
+  background: #f6d0d5;  /* soft red */
+  border: 2px solid #b45c6e;
+  color: #5c1f2e;
+  transition: background-color 0.5s ease;
+}

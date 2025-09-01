@@ -91,22 +91,49 @@ function showQuestion() {
   button3.textContent = `${question.options[2]}`;
   button4.textContent = `${question.options[3]}`;
 
-  button1.addEventListener("click", () => checkAnswer(button1, question.answer));
-  button2.addEventListener("click", () => checkAnswer(button2, question.answer));
-  button3.addEventListener("click", () => checkAnswer(button3, question.answer));
-  button4.addEventListener("click", () => checkAnswer(button4, question.answer));
+// Reset buttons for this new question
+  optionButtons.forEach((button) => {
+    button.classList.remove("correct", "wrong");
+    button.disabled = false;
+    // Add new click behavior
+    button.onclick = () => checkAnswer(button, question.answer);
+  });
 
 }
 
+ // Check the clicked answer
 function checkAnswer(clickedButton, correctAnswer) {
+  // Disable all buttons once an answer is clicked
+  optionButtons.forEach((button) => (button.disabled = true)); // lock after answering
   
-    if (clickedButton.textContent === correctAnswer) {
-      alert("correct"); 
-    score++; 
-    console.log(score);
-    } else if (clickedButton.textContent !== correctAnswer) {
-    alert("wrong");
-       
-  } 
-  };
+  // Highlight the correct answer
+
+  optionButtons.forEach((button) => {
+    if (button.textContent === correctAnswer) {
+      button.classList.add("correct"); // green
+    }
+  });
+  // If the clicked button was wrong
+  if (clickedButton.textContent !== correctAnswer) {
+    clickedButton.classList.add("wrong");
+        
+   
+  } else {
+    score++; // only add score if correct
+    
+  }
+  
+  // Next question after 1 seconds
+  setTimeout(() => {
+    currentQuestion++;
+    if (currentQuestion < quizData.length) {
+      showQuestion();
+    } else {
+      showResults();
+    }
+  }, 1000);
+}
+
+
+
    

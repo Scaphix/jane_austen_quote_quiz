@@ -95,7 +95,7 @@ function showQuestion() {
 
   // reset state
   const question = quizData[currentQuestion];
-
+  currentQuestionSpan.textContent = currentQuestion + 1;
   // Show the quote
   quoteElement.textContent = `${question.quote}`;
   
@@ -125,6 +125,7 @@ function checkAnswer(clickedButton, correctAnswer) {
   optionButtons.forEach((button) => {
     if (button.textContent === correctAnswer) {
       button.classList.add("correct"); // green
+      
     }
   });
   // If the clicked button was wrong
@@ -133,8 +134,9 @@ function checkAnswer(clickedButton, correctAnswer) {
 
   } else {
     score++; // only add score if correct
-    
+    scoreSpan.textContent = score;
   }
+   
   
   // Next question after 1 seconds
   setTimeout(() => {
@@ -153,7 +155,7 @@ function showResults() {
 
   finalScoreSpan.textContent = score;
   
-   let finalScore = localStorage.setItem("playerScore", score);
+ let finalScore = localStorage.setItem("playerScore", score);
 }
 
 function restartQuiz() {

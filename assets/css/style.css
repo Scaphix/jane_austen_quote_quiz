@@ -143,3 +143,12 @@ input, select {
   color: #5c1f2e;
   transition: background-color 0.5s ease;
 }
+
+.quiz-info p {
+  font-size: 1.5rem ;
+  margin:0;
+}
+.quiz-info  {
+  display: flex;
+  justify-content: space-between;
+}

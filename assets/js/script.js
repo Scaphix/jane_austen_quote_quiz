@@ -29,5 +29,28 @@ function namePage() {
   beginScreen.classList.add("active");
 }
 document.getElementById("begin-btn").addEventListener("click", function () {
- window.location.href = "quiz.html";
+  const title = document.querySelector(".person-title").value;
+  const name = document.querySelector(".name-input").value.trim();
+
+  // Clear previous messages
+  document.getElementById("title-error").textContent = "";
+  document.getElementById("name-error").textContent = "";
+
+  if (!title) {
+    document.getElementById("title-error").innerHTML =
+      `<i class="fa-solid fa-triangle-exclamation"></i> Please select a title.`;
+    return false;
+  }
+
+  if (!name) {
+    document.getElementById("name-error").innerHTML =
+      `<i class="fa-solid fa-triangle-exclamation"></i>Please enter your name.`;
+    return false;
+  }
+
+  // If both are filled,
+  localStorage.setItem("playerName", name);
+  localStorage.setItem("playerTitle", title);
+  window.location.href = "quiz.html";
+  return true;
 });

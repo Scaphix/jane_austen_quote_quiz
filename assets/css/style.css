@@ -152,3 +152,11 @@ input, select {
   display: flex;
   justify-content: space-between;
 }
+
+    /* Inline error message style */
+.error-msg {
+  color: #e74c3c;   /* red */
+  font-size: 0.85em;
+  display: block;
+  margin-top: 4px;
+}

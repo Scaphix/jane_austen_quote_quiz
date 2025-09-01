@@ -18,7 +18,14 @@
     <a href="index.html"><h1 id="title">Jane Austen Quote Quiz</h1></a>
  
     <div id="quiz-screen" class="quiz-card screen active">      
-      <div class="quote" id="question-text">quote</div>
+       <div class="quote" id="question-text"></div>
+      <div class="quiz-info">
+        <p>
+          Question <span id="current-question">1</span> of
+          <span id="total-questions">5</span>
+        </p>
+        <p>Score: <span id="score">0</span></p>
+      </div>
       <div id="answers-container">
         <div class="options">
           <button id="option1">option1</button>
@@ -28,7 +35,19 @@
         </div>
       </div>
     </div>
+    <div id="result-screen" class="quiz-card screen">
+      <h2>Quiz Complete!</h2>
+      <div class="result-info">
+        <p>
+          <span class="title-display">title</span> 
+          <br>
+          You scored <span class="final-score">0</span> out of
+          <span id="max-score">5</span>
+        </p>
+      </div>
+      <button id="restart-button">Restart Quiz</button>
 
+    </div>
   
  <script src="https://kit.fontawesome.com/abdecf94a5.js" crossorigin="anonymous"></script>
     <script src="assets/js/quiz.js"></script>

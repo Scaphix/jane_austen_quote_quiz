@@ -63,4 +63,50 @@ const quizData = [
     ],
   },
 ];
-console.log(quizData);
+
+let currentQuestion = 0;
+let score = 0;
+
+startQuiz();
+
+function startQuiz() {
+  // reset variables
+  currentQuestion = 0;
+  score = 0;
+  
+  showQuestion();
+}
+
+function showQuestion() {
+
+  // reset state
+  const question = quizData[currentQuestion];
+
+  // Show the quote
+  quoteElement.textContent = `${question.quote}`;
+  
+  // Create buttons
+  button1.textContent = `${question.options[0]}`;
+  button2.textContent = `${question.options[1]}`;
+  button3.textContent = `${question.options[2]}`;
+  button4.textContent = `${question.options[3]}`;
+
+  button1.addEventListener("click", () => checkAnswer(button1, question.answer));
+  button2.addEventListener("click", () => checkAnswer(button2, question.answer));
+  button3.addEventListener("click", () => checkAnswer(button3, question.answer));
+  button4.addEventListener("click", () => checkAnswer(button4, question.answer));
+
+}
+
+function checkAnswer(clickedButton, correctAnswer) {
+  
+    if (clickedButton.textContent === correctAnswer) {
+      alert("correct"); 
+    score++; 
+    console.log(score);
+    } else if (clickedButton.textContent !== correctAnswer) {
+    alert("wrong");
+       
+  } 
+  };
+   

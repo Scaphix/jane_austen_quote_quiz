@@ -102,7 +102,8 @@ function startQuiz() {
   currentQuestion = 0;
   score = 0;
   scoreSpan.textContent = 0;
-   
+   //randomize the quotes
+  quizData.sort(() => Math.random() - 0.5);
   showQuestion();
 }
 
@@ -113,7 +114,8 @@ function showQuestion() {
   currentQuestionSpan.textContent = currentQuestion + 1;
   // Show the quote
   quoteElement.textContent = `${question.quote}`;
-
+  //randomize the options:
+  question.options = question.options.sort(() => Math.random() - 0.5);
   // Create buttons
   button1.textContent = `${question.options[0]}`;
   button2.textContent = `${question.options[1]}`;

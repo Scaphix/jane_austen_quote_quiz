@@ -1,3 +1,12 @@
+let soundEnabled = false;
+
+document.getElementById("mute-btn").addEventListener("click", function () {
+  soundEnabled = !soundEnabled; // toggle
+
+  this.innerHTML = soundEnabled ? `<i class="fa-solid fa-volume-high"></i> ` : `<i class="fa-solid fa-volume-xmark"></i> `;
+});
+
+
 // DOM Elements
 
 const quizScreen = document.getElementById("quiz-screen");
@@ -131,12 +140,28 @@ function checkAnswer(clickedButton, correctAnswer) {
   // If the clicked button was wrong
   if (clickedButton.textContent !== correctAnswer) {
     clickedButton.classList.add("wrong");
-
+    playWrongSound();
   } else {
     score++; // only add score if correct
+     playCorrectSound();
     scoreSpan.textContent = score;
   }
-   
+   function playCorrectSound(){
+    if (soundEnabled === true){
+  const correctSound = document.getElementById("correct-sound");
+  correctSound.pause();         // stop if already playing
+  correctSound.currentTime = 0; // rewind to start
+  correctSound.play();
+   }
+}
+function playWrongSound(){
+    if  (soundEnabled === true){
+  const wrongSound = document.getElementById("wrong-sound");
+  wrongSound.pause();
+  wrongSound.currentTime = 0;
+  wrongSound.play();
+  }
+}
   
   // Next question after 1 seconds
   setTimeout(() => {

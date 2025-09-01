@@ -14,10 +14,14 @@
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
   <body>
-    
+    <audio id="correct-sound" src="assets/images/correct.mp3" preload="auto"></audio>
+    <audio id="wrong-sound" src="assets/images/wrong.mp3" preload="auto"></audio>
     <a href="index.html"><h1 id="title">Jane Austen Quote Quiz</h1></a>
  
-    <div id="quiz-screen" class="quiz-card screen active">      
+    <div id="quiz-screen" class="quiz-card screen active">  
+      <div id=button >
+        <button id="mute-btn"><i class="fa-solid fa-volume-xmark"></i> </button>
+      </div>    
        <div class="quote" id="question-text"></div>
       <div class="quiz-info">
         <p>

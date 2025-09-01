@@ -5,6 +5,14 @@ const questionText = document.getElementById("question-text");
 const quoteElement = document.querySelector(".quote");
 const quizCard = document.querySelector(".quiz-card");
 
+const resultScreen = document.getElementById("result-screen");
+const currentQuestionSpan = document.getElementById("current-question");
+const totalQuestionsSpan = document.getElementById("total-questions");
+const maxScoreSpan = document.getElementById("max-score");
+const scoreSpan = document.getElementById("score");
+const finalScoreSpan = document.querySelector(".final-score");
+const restartButton = document.getElementById("restart-btn");
+
 //options Buttons
 const button1 = document.getElementById("option1");
 const button2 = document.getElementById("option2");
@@ -66,6 +74,12 @@ const quizData = [
 
 let currentQuestion = 0;
 let score = 0;
+totalQuestionsSpan.textContent = quizData.length;
+maxScoreSpan.textContent = quizData.length;
+
+// event listeners
+
+restartButton.addEventListener("click", restartQuiz);
 
 startQuiz();
 
@@ -73,7 +87,7 @@ function startQuiz() {
   // reset variables
   currentQuestion = 0;
   score = 0;
-  
+  scoreSpan.textContent = 0;
   showQuestion();
 }
 
@@ -116,8 +130,7 @@ function checkAnswer(clickedButton, correctAnswer) {
   // If the clicked button was wrong
   if (clickedButton.textContent !== correctAnswer) {
     clickedButton.classList.add("wrong");
-        
-   
+
   } else {
     score++; // only add score if correct
     
@@ -134,6 +147,20 @@ function checkAnswer(clickedButton, correctAnswer) {
   }, 1000);
 }
 
+function showResults() {
+  quizScreen.classList.remove("active");
+  resultScreen.classList.add("active");
+
+  finalScoreSpan.textContent = score;
+  
+   let finalScore = localStorage.setItem("playerScore", score);
+}
+
+function restartQuiz() {
+  resultScreen.classList.remove("active");
+  quizScreen.classList.add("active");
+  startQuiz();
+}
 
 
    

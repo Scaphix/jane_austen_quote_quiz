@@ -8,4 +8,6 @@ function namePage() {
   startScreen.classList.remove("active");
   beginScreen.classList.add("active");
 }
-
+document.getElementById("begin-btn").addEventListener("click", function () {
+ window.location.href = "quiz.html";
+});

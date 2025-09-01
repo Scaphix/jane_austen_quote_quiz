@@ -43,14 +43,15 @@ h2 {
     }
     
 p {
-     padding: 0 0.5rem 0 0.5rem;
+    
+     margin:1rem;
       font-family: 'Dancing Script', cursive;
       font-size: 1.5rem;
       color: #9c5c65;
       background: #fffaf7;
       max-width: 800px;
       text-align: center;
-      margin-bottom: 2rem;
+
     }
 
 button {

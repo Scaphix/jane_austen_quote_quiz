@@ -30,14 +30,13 @@
         </p>
         <p>Score: <span id="score">0</span></p>
       </div>
-      <div id="answers-container">
         <div class="options">
           <button id="option1">option1</button>
           <button id="option2">option2</button>
           <button id="option3">option3</button>
           <button id="option4">option4</button>
         </div>
-      </div>
+      
     </div>
     <div id="result-screen" class="quiz-card screen">
       <h2>Quiz Complete!</h2>
@@ -49,8 +48,19 @@
           <span id="max-score">5</span>
         </p>
       </div>
+       <button id="score-btn">Show Score</button>
       <button id="restart-btn">Restart Quiz</button>
-
+    </div>
+    <div id="score-screen" class="score-card screen ">
+      <h2>Score table</h2>
+      <div class="quiz-end">
+        <p><span class="name-display">name</span> </p>
+        <br>
+        <p >Your score is <span class="final-score">0</span> </p>
+          <br>
+        <p>The high score is <span id="high-score">0</span> </p>
+      </div>
+      <button id="quiz-btn">Restart Quiz</button>
     </div>
   
  <script src="https://kit.fontawesome.com/abdecf94a5.js" crossorigin="anonymous"></script>

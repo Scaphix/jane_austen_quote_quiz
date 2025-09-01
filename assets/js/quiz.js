@@ -21,6 +21,9 @@ const maxScoreSpan = document.getElementById("max-score");
 const scoreSpan = document.getElementById("score");
 const finalScoreSpan = document.querySelector(".final-score");
 const restartButton = document.getElementById("restart-btn");
+const quizBtn = document.getElementById("quiz-btn");
+const scoreButton = document.getElementById("score-btn");
+const scoreScreen = document.getElementById("score-screen");
 
 //options Buttons
 const button1 = document.getElementById("option1");
@@ -89,6 +92,8 @@ maxScoreSpan.textContent = quizData.length;
 // event listeners
 
 restartButton.addEventListener("click", restartQuiz);
+quizBtn.addEventListener("click", restartQuiz);
+scoreButton.addEventListener("click", showScore);
 
 startQuiz();
 
@@ -183,8 +188,24 @@ function showResults() {
  let finalScore = localStorage.setItem("playerScore", score);
 }
 
+function showScore() {
+  resultScreen.classList.remove("active");
+  scoreScreen.classList.add("active");
+    // get the data
+    let name = localStorage.getItem("playerName");
+    let score = localStorage.getItem("playerScore");
+    console.log(name,score);
+    document.querySelector(".name-display").textContent = name;
+    
+        // 4. Show data on page
+    document.querySelector(".final-score").textContent = score;
+    document.getElementById("high-score").textContent = 10 ;
+}
+
+
 function restartQuiz() {
   resultScreen.classList.remove("active");
+  scoreScreen.classList.remove("active");
   quizScreen.classList.add("active");
   startQuiz();
 }

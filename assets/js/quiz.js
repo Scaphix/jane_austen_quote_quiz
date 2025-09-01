@@ -102,8 +102,7 @@ function startQuiz() {
   currentQuestion = 0;
   score = 0;
   scoreSpan.textContent = 0;
-   //randomize the quotes
-  quizData.sort(() => Math.random() - 0.5);
+   
   showQuestion();
 }
 
@@ -114,8 +113,7 @@ function showQuestion() {
   currentQuestionSpan.textContent = currentQuestion + 1;
   // Show the quote
   quoteElement.textContent = `${question.quote}`;
-  //randomise the options:
-  question.options = question.options.sort(() => Math.random() - 0.5);
+
   // Create buttons
   button1.textContent = `${question.options[0]}`;
   button2.textContent = `${question.options[1]}`;
@@ -129,7 +127,6 @@ function showQuestion() {
     // Add new click behavior
     button.onclick = () => checkAnswer(button, question.answer);
   });
-
 }
 
  // Check the clicked answer
@@ -204,7 +201,6 @@ function showScore() {
     document.querySelector(".final-score").textContent = score;
     document.getElementById("high-score").textContent = 10 ;
 }
-
 
 function restartQuiz() {
   resultScreen.classList.remove("active");

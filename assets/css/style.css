@@ -1,6 +1,6 @@
 body {
     margin:0.5rem;
-    padding: 1rem;
+   
     font-family: 'Playfair Display', serif;
     background-image: url("../images/background.png");
     max-height: 100vh;
@@ -15,7 +15,7 @@ body {
   border: 2px solid #e2c6b6;
   border-radius: 20px;
   width: 100%;
-  max-width: 600px;
+  max-width: 300px;
   text-align: center;
 }
 #title{
@@ -38,7 +38,6 @@ a {
 h2 {
     font-family: 'Playfair Display', cursive;
     font-size: 1.5rem;
-    Margin:0;
     padding-top: 2rem;
     color: #b76e79;
     text-align: center;
@@ -46,8 +45,7 @@ h2 {
     }
     
 p {
-    
-     margin:1rem;
+      margin:1rem;
       font-family: 'Dancing Script', cursive;
       font-size: 1.5rem;
       color: #9c5c65;
@@ -97,10 +95,10 @@ input, select {
 .quote {
   font-style: italic;
   font-size: 1.5rem;
-  margin-top: 10px;
+  margin-top: 20px;
   color: #4a3c3c;
   position: relative;
-  padding: 2rem;
+  padding: 1rem;
   margin-bottom: 1.5rem;
 }
 
@@ -109,7 +107,9 @@ input, select {
   font-size: 2rem;
   color: #b76e79;
 }
-
+.options{
+    padding: 0 1rem 1rem;
+}
 .options button {
   display: block;
   width: 100%;
@@ -144,12 +144,12 @@ input, select {
   transition: background-color 0.5s ease;
 }
 
-.quiz-info p {
-  font-size: 1.5rem ;
-  margin:0;
+.quiz-info p{
+    margin:0;
 }
 .quiz-info  {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
 }
 
@@ -187,4 +187,85 @@ input, select {
   font-size: 2rem;
   margin-bottom: 15px;
   color: #e67e22;
+}
+
+#button button{
+ display: block;
+  width: 30px;
+  margin:  0.5rem;
+  padding:0.5rem;
+  border: none;
+  border-radius: 15px;
+  background: linear-gradient(to right, #f9dede, #f3caca);
+  color: #333;
+  font-size: 10px;
+  cursor: pointer;
+  position: absolute;
+}
+
+/* RESPONSIVE DESIGN */
+@media (min-width: 425px) {
+  /* when we hit 500px and bigger, implement the styles below */
+
+  body {
+   margin:2.5rem;
+    max-height: 100vh;
+    padding: 0;
+    }
+    .quiz-card {
+
+  width: 100%;
+  max-width: 800px;
+  
+}
+  
+#title{
+    font-size: 2rem;
+    padding:2rem;
+    margin-bottom: 4rem;
+    }
+ h2, p {
+    font-size: 2rem;
+    padding:0;
+    margin-bottom: 2rem;
+    
+  }
+h1 {
+    font-size: 3rem;
+    margin:0;
+    padding-top: 2rem;
+  }
+
+
+.quiz-card{
+ padding: 0;
+}
+
+  button{
+     margin: 0.5rem 0;
+      padding: 0.8rem;
+    font-size: 2rem;
+  }
+   #button button{
+ 
+  font-size: 0.7rem;
+ }
+
+ input, select {
+ 
+      max-width:100px;
+      padding: 0.1rem;
+      font-size: 1rem;
+      margin-top: 1rem;
+ }
+.quiz-info  {
+  display: flex;
+flex-direction: row;
+  justify-content: space-between;
+}
+.quiz-info p {
+ font-size: 1.5rem;
+ padding: 0 1rem;
+}
+
 }

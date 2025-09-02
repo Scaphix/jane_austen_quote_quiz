@@ -9,7 +9,8 @@ body {
     align-items: center;
     }
 
-.quiz-card {
+.quiz-card { 
+   padding: 0.1rem;
   background-color: #fffaf7;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
   border: 2px solid #e2c6b6;
@@ -77,6 +78,7 @@ button {
 }
 .screen.active {
   display: block;
+
 }
 
 input, select {
@@ -85,6 +87,7 @@ input, select {
       margin: 0.1rem;
       padding: 0.5rem;
       border: none;
+      border-radius: 20px;
       background-color: #f3d6d6 ;
       color: #333;
       font-size: 0.9rem;
@@ -212,7 +215,7 @@ input, select {
     max-height: 100vh;
     padding: 0;
     }
-    .quiz-card {
+ .quiz-card {
 
   width: 100%;
   max-width: 800px;
@@ -236,9 +239,8 @@ h1 {
     padding-top: 2rem;
   }
 
-
 .quiz-card{
- padding: 0;
+   padding: 15px;
 }
 
   button{
@@ -247,16 +249,23 @@ h1 {
     font-size: 2rem;
   }
    #button button{
- 
-  font-size: 0.7rem;
+   font-size: 0.7rem;
  }
 
  input, select {
  
-      max-width:100px;
-      padding: 0.1rem;
+      max-width:200px;
+       margin: 0;
+      padding: 0.5rem;
       font-size: 1rem;
       margin-top: 1rem;
+ }
+
+ #element {
+    display:flex;
+   justify-content: center;
+   gap: 1em;
+     
  }
 .quiz-info  {
   display: flex;

@@ -198,10 +198,12 @@ const quizData = [
   }
 ];
 
+let num = 8;
 let currentQuestion = 0;
 let score = 0;
-totalQuestionsSpan.textContent = quizData.length;
-maxScoreSpan.textContent = quizData.length;
+// How many questions has the quiz
+  totalQuestionsSpan.textContent = num;
+  maxScoreSpan.textContent = num;
 
 // event listeners
 
@@ -216,8 +218,10 @@ function startQuiz() {
   currentQuestion = 0;
   score = 0;
   scoreSpan.textContent = 0;
-  //randomize the quotes
-  quizData.sort(() => Math.random() - 0.5);
+ // Create a new array of 8 random questions
+
+  quizData.sort(() => Math.random() - 0.5).slice(0,num);
+
   showQuestion();
 }
 
@@ -285,7 +289,7 @@ function checkAnswer(clickedButton, correctAnswer) {
   // Next question after 1 seconds
   setTimeout(() => {
     currentQuestion++;
-    if (currentQuestion < quizData.length) {
+    if (currentQuestion < num) {
       showQuestion();
     } else {
       showResults();

@@ -1,12 +1,3 @@
-let soundEnabled = false;
-
-document.getElementById("mute-btn").addEventListener("click", function () {
-  soundEnabled = !soundEnabled; // toggle
-
-  this.innerHTML = soundEnabled ? `<i class="fa-solid fa-volume-high"></i> ` : `<i class="fa-solid fa-volume-xmark"></i> `;
-});
-
-
 // DOM Elements
 
 const quizScreen = document.getElementById("quiz-screen");
@@ -33,7 +24,29 @@ const button4 = document.getElementById("option4");
 
 const optionButtons = [button1, button2, button3, button4];
 
-// 1. Quiz data
+// enable sound effects
+
+let soundEnabled = false;
+let btn = document.getElementById("mute-btn");
+let icon = document.getElementById("sound-icon");
+
+btn.addEventListener("click", toggleSound);
+
+function toggleSound() {
+  soundEnabled = !soundEnabled; // toggle
+
+  if (soundEnabled) {
+    icon.classList.remove("fa-volume-xmark");
+    icon.classList.add("fa-volume-high");
+  } else {
+    icon.classList.remove("fa-volume-high");
+    icon.classList.add("fa-volume-xmark");
+  }
+}
+
+
+
+// Quiz data
 const quizData = [
   {
     quote: `It is a truth universally acknowledged, that a single man in possession of a good fortune, must be in want of a wife.`,

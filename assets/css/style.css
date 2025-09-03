@@ -31,6 +31,7 @@ body {
       max-width: 800px;
       text-align: center;
       margin-bottom: 2rem;
+     letter-spacing: 2px;
 
 }
 a {
@@ -42,7 +43,7 @@ h2 {
     padding-top: 2rem;
     color: #b76e79;
     text-align: center;
-     
+    
     }
     
 p {
@@ -226,11 +227,13 @@ input, select {
     font-size: 2rem;
     padding:2rem;
     margin-bottom: 4rem;
+    
     }
  h2, p {
     font-size: 2rem;
     padding:0;
     margin-bottom: 2rem;
+    letter-spacing: 1px;
     
   }
 h1 {

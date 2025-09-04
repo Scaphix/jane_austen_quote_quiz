@@ -28,7 +28,6 @@ body {
       border-radius: 20px;
       box-shadow: 0 4px 20px rgba(0,0,0,0.5);
       padding: 1rem;
-      max-width: 800px;
       text-align: center;
       margin-bottom: 2rem;
      letter-spacing: 2px;
@@ -52,7 +51,6 @@ p {
       font-size: 1.5rem;
       color: #9c5c65;
       background: #fffaf7;
-      max-width: 800px;
       text-align: center;
 
     }
@@ -218,9 +216,9 @@ input, select {
     }
  .quiz-card {
 
-  width: 100%;
   max-width: 800px;
-  
+  width: 400px;
+   padding: 15px;
 }
   
 #title{
@@ -241,11 +239,6 @@ h1 {
     margin:0;
     padding-top: 2rem;
   }
-
-.quiz-card{
-   padding: 15px;
-   width: 800px;
-}
 
   button{
      margin: 0.5rem 0;
@@ -282,3 +275,13 @@ flex-direction: row;
 }
 
 }
+
+@media (min-width: 768px) {
+  /* when we hit 425px and bigger, implement the styles below */
+
+ .quiz-card {
+  width: 700px;
+  
+ }
+}
+

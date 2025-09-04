@@ -286,7 +286,7 @@ function checkAnswer(clickedButton, correctAnswer) {
     }
   }
 
-  // Next question after 1 seconds
+  // Next question after 2 seconds
   setTimeout(() => {
     currentQuestion++;
     if (currentQuestion < num) {
@@ -294,7 +294,7 @@ function checkAnswer(clickedButton, correctAnswer) {
     } else {
       showResults();
     }
-  }, 1000);
+  }, 2000);
 }
 
 function showResults() {

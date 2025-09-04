@@ -163,8 +163,7 @@ input, select {
   margin-top: 4px;
 }
 
-
-#button button{
+.button button{
  display: block;
   width: 30%;
   max-width: 50px;
@@ -240,7 +239,7 @@ h1 {
       padding: 0.8rem;
     font-size: 1.5rem;
   }
-  #button button{
+  .button button{
 
   font-size: 1rem;
  }

@@ -1,20 +1,32 @@
 document.addEventListener("DOMContentLoaded", music);
 
-function music() {
-    let soundEnabled = false;  // global sound state
-    let muteBtn = document.getElementById("mute-btn");
-    muteBtn.addEventListener("click", function () { 
-        soundEnabled = !soundEnabled;
-   
-    // If turning sound OFF → pause melody if playing
-    if (soundEnabled===true) {
+let soundEnabled = false;  // global sound state
+
+const changeMusicState = () => {
+  soundEnabled = !soundEnabled;
+  let icons = document.querySelectorAll(".sound-icon");
+  if (soundEnabled) {
       document.getElementById("intro-melody").play();
-        muteBtn.innerHTML = `<i class="fa-solid fa-volume-high"></i>` ;
+      icons.forEach((icon) => {
+        icon.classList.remove("fa-volume-xmark");
+        icon.classList.add("fa-volume-high");
+      });
     } else {
-        document.getElementById("intro-melody").pause(); 
-         muteBtn.innerHTML =  `<i class="fa-solid fa-volume-xmark"></i> ` ;
+      document.getElementById("intro-melody").pause(); 
+      icons.forEach((icon) => {
+        icon.classList.remove("fa-volume-high");
+        icon.classList.add("fa-volume-xmark");
+      });
     }
-  });
+}
+
+function music() {
+    let muteBtn = document.getElementById("mute-btn");
+    let muteBtn2= document.getElementById("mute-btn2");
+
+    muteBtn.addEventListener('click', changeMusicState);
+    muteBtn2.addEventListener('click', changeMusicState);
+
 }
 
 

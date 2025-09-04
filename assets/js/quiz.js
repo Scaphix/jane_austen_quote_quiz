@@ -353,6 +353,15 @@ function showScore() {
     tableBody.appendChild(row);
   });
 
+    let clearBtn = document.getElementById("clear-scores");
+    
+      clearBtn.addEventListener("click", () => {
+      localStorage.removeItem("highScores");
+      tableBody.innerHTML = ""; // clear the table visually
+      alert("Scores cleared!");
+    });
+  
+
 }
 
 

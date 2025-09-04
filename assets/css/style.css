@@ -163,33 +163,6 @@ input, select {
   margin-top: 4px;
 }
 
-/* Scoreboard card style */
-.score-card {
-   font-family: "Georgia", serif;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-  background-color: #fffaf7;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  border: 2px solid #e2c6b6;
-  border-radius: 20px;
-  width: 100%;
-  max-width: 300px;
-  text-align: center;
-}
-
-
-/* Final score text */
-.score-card #final-score {
-  font-size: 2rem;
-  margin-bottom: 8px;
-  color: #16a085;
-}
-
-/* High score text */
-.score-card #high-score {
-  font-size: 2rem;
-  margin-bottom: 15px;
-  color: #e67e22;
-}
 
 #button button{
  display: block;
@@ -204,6 +177,27 @@ input, select {
    cursor: pointer;
   position: absolute;
 }
+
+/* high score table*/
+table {
+      margin: 0 auto;
+      border-collapse: collapse;
+      width: 80%;
+      max-width: 500px;
+       color: #b76e79;
+      background: linear-gradient(to bottom right, #fdf6f0, #f9e1e0);
+      border: 2px solid #e2c6b6;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+      padding: 1rem;
+    }
+    th, td {
+      border: 1px solid #333;
+         
+    }
+    th {
+     font-size: 1rem;
+    }
+   
 
 
 /* RESPONSIVE DESIGN */
@@ -244,7 +238,7 @@ h1 {
   button{
      margin: 0.5rem 0;
       padding: 0.8rem;
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
   #button button{
 
@@ -275,6 +269,11 @@ flex-direction: row;
  font-size: 1.5rem;
  padding: 0 1rem;
 }
+
+th, td {
+      
+      padding: 0.5rem 1rem;
+    }
 
 }
 

@@ -51,15 +51,24 @@
        <button id="score-btn">Show Score</button>
       <button id="restart-btn" aria-label="restart-button">Restart Quiz</button>
     </div>
-    <div id="score-screen" class="score-card screen ">
-      <h2>Score table</h2>
+    <div id="score-screen" class="quiz-card screen ">
+      <h2>High Scores</h2>
       <div class="quiz-end">
-        <p><span class="name-display">name</span> </p>
+        <table>
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Name</th>
+                <th>Score</th>
+             </tr>
+        </thead>
+        <tbody id="score-table-body">
+          
+
+        </tbody>
+        </table>
         <br>
-        <p >Your score is <span class="final-score">0</span> </p>
-          <br>
-        <p>The high score is <span id="high-score">0</span> </p>
-      </div>
+      <button onclick="window.location.href='index.html'">Back to Start</button>
       <button id="quiz-btn" aria-label="restart-button">Restart Quiz</button>
     </div>
   

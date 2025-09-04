@@ -198,7 +198,7 @@ const quizData = [
   }
 ];
 
-let num = 8;
+let num = 2;
 let currentQuestion = 0;
 let score = 0;
 // How many questions has the quiz
@@ -302,13 +302,17 @@ function showResults() {
   resultScreen.classList.add("active");
 
   finalScoreSpan.textContent = score;
-
+    let name = localStorage.getItem("playerName");
+    let title = localStorage.getItem("playerTitle");
+    document.querySelector(".title-display").textContent = title +" "+ name;
+     
   let finalScore = localStorage.setItem("playerScore", score);
 }
 
 function showScore() {
   resultScreen.classList.remove("active");
   scoreScreen.classList.add("active");
+  
   // get the data
   let name = localStorage.getItem("playerName");
   let score = localStorage.getItem("playerScore");

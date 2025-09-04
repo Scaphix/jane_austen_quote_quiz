@@ -49,7 +49,7 @@ p {
       margin:1rem;
       font-family: 'Dancing Script', cursive;
       font-size: 1.5rem;
-      color: #9c5c65;
+      color: #b76e79;
       background: #fffaf7;
       text-align: center;
 
@@ -63,7 +63,7 @@ button {
       border: none;
       border-radius: 12px;
       background-color: #f3d6d6;
-      color: #333;
+      color: #4a3c3c;
       font-size: 1rem;
       font-family: 'Playfair Display', serif;
       cursor: pointer;
@@ -88,7 +88,7 @@ input, select {
       border: none;
       border-radius: 20px;
       background-color: #f3d6d6 ;
-      color: #333;
+      color: #4a3c3c;
       font-size: 0.9rem;
       font-family: 'Playfair Display', serif;
       cursor: pointer;
@@ -172,7 +172,7 @@ input, select {
   border: none;
   border-radius: 20px;
   background: linear-gradient(to right, #f9dede, #f3caca);
-  color: #333;
+  color: #4a3c3c;
    cursor: pointer;
   position: absolute;
 }

@@ -4,7 +4,6 @@ const quizScreen = document.getElementById("quiz-screen");
 const questionText = document.getElementById("question-text");
 const quoteElement = document.querySelector(".quote");
 const quizCard = document.querySelector(".quiz-card");
-
 const resultScreen = document.getElementById("result-screen");
 const currentQuestionSpan = document.getElementById("current-question");
 const totalQuestionsSpan = document.getElementById("total-questions");
@@ -204,14 +203,9 @@ function showScore() {
       clearBtn.addEventListener("click", () => {
       localStorage.removeItem("highScores");
       tableBody.innerHTML = ""; // clear the table visually
-      alert("Scores cleared!");
     });
-  
 
 }
-
-
-
 
 function restartQuiz() {
   resultScreen.classList.remove("active");

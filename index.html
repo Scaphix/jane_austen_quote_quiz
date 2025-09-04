@@ -19,7 +19,7 @@
 
     <div id="start-screen" class="quiz-card screen active">
        <div id=button >
-        <button id="mute-btn" type="button"><i class="fa-solid fa-volume-xmark"></i></button>
+        <button id="mute-btn" type="button"><i id="sound-icon" class="fa-solid fa-volume-xmark"></i></button>
       </div>
      <h2>Welcome to our Quiz</h2>
      <p>Esteemed Reader, </p>
@@ -39,20 +39,21 @@
         Would you be so obliging as to favour me with your name, dear guest?
       </p>
        <div id="element">
-      <label for="person-title" diplay="none"></label>
+      <label for="person-title" diplay="invisible"></label>
       <select id="person-title" class="person-title">
         <option value="" selected>Select title</option>
         <option value="Sir">Sir</option>
         <option value="My lady">My Lady</option>
         <option value="Your Grace">Your Grace</option>
       </select>
-      <input type="text" class="name-input" placeholder="Name" />
+       <label for="name-input" diplay="invisible"></label>
+      <input type="text" id="name-input" class="name-input" placeholder="Name" />
     </div> 
     <div id="error-box">
         <span id="title-error" class="error-msg"></span>
         <span id="name-error" class="error-msg"></span>
     </div>
-      <button id="begin-btn">Let us begin</button>
+      <button id="begin-btn" type="button">Let us begin</button>
     </div>
     <script src="https://kit.fontawesome.com/abdecf94a5.js" crossorigin="anonymous"></script>
     <script src="assets/js/script.js"></script>

@@ -302,27 +302,58 @@ function showResults() {
   resultScreen.classList.add("active");
 
   finalScoreSpan.textContent = score;
-    let name = localStorage.getItem("playerName");
-    let title = localStorage.getItem("playerTitle");
-    document.querySelector(".title-display").textContent = title +" "+ name;
-     
-  let finalScore = localStorage.setItem("playerScore", score);
+
+  // Get player info
+  let playerName = localStorage.getItem("playerName");
+  let playerTitle = localStorage.getItem("playerTitle");
+
+  document.querySelector(".title-display").textContent =
+    playerTitle + " " + playerName;
+
+  // Save this round into localStorage (array of scores)
+  let scores = JSON.parse(localStorage.getItem("highScores")) || [];
+  scores.push({ name: playerName, title: playerTitle, score: score });
+ 
+  // Keep only top 8
+  scores = scores.slice(0, 8);
+
+  // Save back
+  localStorage.setItem("highScores", JSON.stringify(scores));
 }
 
 function showScore() {
   resultScreen.classList.remove("active");
   scoreScreen.classList.add("active");
-  
-  // get the data
-  let name = localStorage.getItem("playerName");
-  let score = localStorage.getItem("playerScore");
-  console.log(name, score);
-  document.querySelector(".name-display").textContent = name;
 
-  // 4. Show data on page
-  document.querySelector(".final-score").textContent = score;
-  document.getElementById("high-score").textContent = 10;
+  const tableBody = document.getElementById("score-table-body");
+  tableBody.innerHTML = ""; // clear old rows
+
+  // Load stored scores
+  let scores = JSON.parse(localStorage.getItem("highScores")) || [];
+
+  // Build table rows
+  scores.forEach((player) => {
+    const row = document.createElement("tr");
+
+    const titleCell = document.createElement("td");
+    titleCell.textContent = player.title;
+    row.appendChild(titleCell);
+
+    const nameCell = document.createElement("td");
+    nameCell.textContent = player.name;
+    row.appendChild(nameCell);
+
+    const scoreCell = document.createElement("td");
+    scoreCell.textContent = player.score;
+    row.appendChild(scoreCell);
+
+    tableBody.appendChild(row);
+  });
+
 }
+
+
+
 
 function restartQuiz() {
   resultScreen.classList.remove("active");

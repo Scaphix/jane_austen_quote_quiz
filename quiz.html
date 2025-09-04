@@ -20,7 +20,7 @@
   <div class="container">
     <div id="quiz-screen" class="quiz-card screen active">  
       <div id=button >
-        <button id="mute-btn" type="button"> <i id="sound-icon" class="fa-solid fa-volume-xmark"></i>  </button>
+        <button id="mute-btn" aria-label="mute-button"> <i id="sound-icon" class="fa-solid fa-volume-xmark"></i>  </button>
       </div>    
        <div class="quote" id="question-text"></div>
       <div class="quiz-info">
@@ -31,10 +31,10 @@
         <p>Score: <span id="score">0</span></p>
       </div>
         <div class="options">
-          <button id="option1">option1</button>
-          <button id="option2">option2</button>
-          <button id="option3">option3</button>
-          <button id="option4">option4</button>
+          <button id="option1" aria-label="option1">option1</button>
+          <button id="option2" aria-label="option2">option2</button>
+          <button id="option3" aria-label="option3">option3</button>
+          <button id="option4" aria-label="option4">option4</button>
         </div>
       
     </div>
@@ -50,7 +50,7 @@
         </p>
       </div>
        <button id="score-btn">Show Score</button>
-      <button id="restart-btn">Restart Quiz</button>
+      <button id="restart-btn" aria-label="restart-button">Restart Quiz</button>
     </div>
     <div id="score-screen" class="score-card screen ">
       <h2>Score table</h2>
@@ -61,7 +61,7 @@
           <br>
         <p>The high score is <span id="high-score">0</span> </p>
       </div>
-      <button id="quiz-btn">Restart Quiz</button>
+      <button id="quiz-btn" aria-label="restart-button">Restart Quiz</button>
     </div>
   
  <script src="https://kit.fontawesome.com/abdecf94a5.js" crossorigin="anonymous"></script>

@@ -313,7 +313,10 @@ function showResults() {
   // Save this round into localStorage (array of scores)
   let scores = JSON.parse(localStorage.getItem("highScores")) || [];
   scores.push({ name: playerName, title: playerTitle, score: score });
- 
+
+  // Sort score highest to lowest
+  scores.sort((a, b) => b.score - a.score);
+
   // Keep only top 8
   scores = scores.slice(0, 8);
 

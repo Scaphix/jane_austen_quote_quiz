@@ -12,6 +12,7 @@ const restartButton = document.getElementById("restart-btn");
 const quizBtn = document.getElementById("quiz-btn");
 const scoreButton = document.getElementById("score-btn");
 const scoreScreen = document.getElementById("score-screen");
+const returnButton = document.getElementById("return-button");
 
 //options Buttons
 const button1 = document.getElementById("option1");
@@ -53,6 +54,13 @@ let score = 0;
 restartButton.addEventListener("click", restartQuiz);
 quizBtn.addEventListener("click", restartQuiz);
 scoreButton.addEventListener("click", showScore);
+returnButton.addEventListener("click", backToStart);
+
+
+function backToStart (){
+ window.location.href = "index.html";
+
+}
 
 startQuiz();
 

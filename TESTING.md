@@ -4,26 +4,26 @@
 | :---------: | :----------: | :-----:|
 | **Intro music**  | When the page loads, the music is off   | ✔|
 | **Mute button**  | When I click on the mute button on the start screen, I can turn on/off the music | ✔ | 
-| **Enter Quiz button**  | When I click on the Enter Quiz button I enter the qute quiz screen  | ✔ | 
+| **Enter Quiz button**  | When I click on the Enter Quiz button I enter the quiz screen  | ✔ | 
 | **Mute button**   | When I click on the mute button of the name screen, I can turn on/off the music | ✔ | 
 | **Select player title**   | When I click on the select button a title selection drops down | ✔ | 
 | **Name input**   | When I click on the input name field I can write my name  | ✔ | 
-| **input error**   | If the player title or the name is not filled out, an error message apears | ✔ |
-| **Let us begin button**   | When I click on the Let us begin, I enter the quiz screen| ✔ | 
+| **input error**   | If the player title or the name is not filled out, an error message appears | ✔ |
+| **Let's begin button**   | When I click on the Let us begin button, I enter the quiz screen| ✔ | 
 | **Navbar selection**   | The current page we're in is highlighted on the navbar | ✔ |
 |**Mute button**   | When I click on the mute button of the Quiz screen, I can turn on/off the sound effects | ✔ | 
 | **Options hover**  |While hovering over the options, I receive visual feedback   | ✔|
 | **Secondary Title**  | When I click on the Title on the quiz screen, I navigate to the start page  | ✔|
-| **option buttons** | When I click on an option, I have a visual response whether it's correct or wrong and a new questions loads  | ✔ |
+| **option buttons** | When I click on an option, I have a visual response whether it's correct or wrong and a new question loads  | ✔ |
 | **score tracker** | When I click on the right answer, the score updates  | ✔ |
 | **progress tracker** | When I click on an option the questions tracker is incremented |  ✔ |
-| **score screen** | When I click on the last question the score screen apears with my score displayed | ✔ |
-| **show score button** | When I click on the show score button, the High scores screen apears and my score is displayed on the table | ✔ |
-| **restart quiz** | when I click on the restart quiz button I go back to the quiz screen and I can take the quiz again.  | ✔ |
+| **score screen** | When I click on the last question the score screen appears with my score displayed | ✔ |
+| **show score button** | When I click on the show score button, the High scores screen appears and my score is displayed on the table | ✔ |
+| **Restart quiz** | When I click on the restart quiz button I go back to the quiz screen and I can take the quiz again.  | ✔ |
 | **High score table** | The high scores are sorted from higher to lower | ✔ |
-| **back to start button** | When I click on the show score button, the High scores screen apears and my score is displayed on the table | ✔ |
-| **restart quiz** | when I click on the restart quiz button on the high scores screen I go back to the quiz screen and I can take the quiz again.  | ✔ |
-| **Clear scores** | when I click on the clear scores button, the scores are deleted and the table is empty | ✔ |
+| **Back to start button** | When I click on the back to start button, I return to the start screen | ✔ |
+| **Restart quiz** | When I click on the restart quiz button on the high scores screen I go back to the quiz screen and I can take the quiz again.  | ✔ |
+| **Clear scores** | When I click on the clear scores button, the scores are deleted and the table is empty | ✔ |
 
 
 
@@ -31,14 +31,14 @@
 
 | Feature  | Implementation  |
 | --------------------------------- | :------------------------------:|
-| As a new visitor, I want to understand what the quiz offers, so I can decide if it's right for me. | ![cta buton](document/paragraph-intro.png) |
-| As a user, I want to easily start the quiz, so I can begin testing my Austen knowledge immediately. | ![open hours](document/begin-btn.png) |
-| As a user, I want to see my score and progress, so I can track my performance throughout the quiz. | ![contact](document/live-score.png) |
-| As a user, I want to be able to restart the quiz, so I can play multiple times and improve my score. |  ![form](document/restart-btn.png)  |
-| As a mobile user, I want a responsive layout, so my experience is smooth on any device. | ![responsive](document/responsive.png) |
-| As a user, I want to enter my name and title, so the quiz feels personalized and engaging.| ![courses](document/name-title.png) |
-| As a user, I want sound effects for correct and incorrect answers, so the experience is more immersive.| ![bulletpoints](document/sound-effects.png) |
-| As a visitor, I want to see a high score table, so I can compete with other players. | ![social media](document/table.png) |
+| As a new visitor, I want to understand what the quiz offers, so I can decide if it's right for me. | ![start screen](document/paragraph-intro.png) |
+| As a user, I want to easily start the quiz, so I can begin testing my Austen knowledge immediately. | ![Begin button](document/begin-btn.png) |
+| As a user, I want to see my score and progress, so I can track my performance throughout the quiz. | ![Live score](document/live-score.png) |
+| As a user, I want to be able to restart the quiz, so I can play multiple times and improve my score. |  ![Restart button](document/restart-btn.png)  |
+| As a mobile user, I want a responsive layout, so my experience is smooth on any device. | ![Responsive design](document/responsive.png) |
+| As a user, I want to enter my name and title, so the quiz feels personalized and engaging.| ![Name and title input](document/name-title.png) |
+| As a user, I want sound effects for correct and incorrect answers, so the experience is more immersive.| ![Sound effects](document/sound-effects.png) |
+| As a visitor, I want to see a high score table, so I can compete with other players. | ![High score table](document/table.png) |
 
 
 
@@ -69,6 +69,16 @@ No error found.
 
 ## [Java script validator](https://jshint.com/)
 
+### Home page
+
+![screenshot of the java script Validator](document/script-validator.png)
+
+### Quiz page
+
+The validator shows one undefined variable, which is quizData. This variable is defined and called from another file named questions.js located in the Data document.
+
+
+![screenshot of the java script Validator](document/quiz-validator.png)
 
 # lighthouse testing
 

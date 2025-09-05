@@ -22,18 +22,25 @@ No error found.
 
 ![screenshot of the CSS Validator](document/css-validator.png)
 
+
+## [Java script validator](https://jshint.com/)
+
+
+
+
+
 # lighthouse testing
 
 ## index page
 
 **Desktop**
 
-![Logo of the website](document/home-desktop.png)
+![Logo of the website](document/index-lighthouse.png)
 
 
 ## quiz page
 
 **Desktop**
 
-![Logo of the website](document/about-desktop.png)
+![Logo of the website](document/quiz-lighthouse.png)
 

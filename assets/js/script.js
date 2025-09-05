@@ -18,7 +18,7 @@ const changeMusicState = () => {
         icon.classList.add("fa-volume-xmark");
       });
     }
-}
+};
 
 function music() {
     let muteBtn = document.getElementById("mute-btn");

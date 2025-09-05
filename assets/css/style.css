@@ -175,6 +175,7 @@ input, select {
   color: #4a3c3c;
    cursor: pointer;
   position: absolute;
+   z-index: 1;
 }
 
 /* high score table*/
@@ -197,7 +198,6 @@ table {
      font-size: 1rem;
     }
    
-
 
 /* RESPONSIVE DESIGN */
 @media (min-width: 425px) {
@@ -242,6 +242,7 @@ h1 {
   .button button{
 
   font-size: 1rem;
+ 
  }
 
  input, select {
@@ -252,6 +253,14 @@ h1 {
       font-size: 1rem;
       margin-top: 1rem;
  }
+
+/* Change the white to any color */
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active{
+    -webkit-box-shadow: 0 0 0 30px #f3d6d6 inset !important;
+}
 
  #element {
     display:flex;
@@ -284,4 +293,5 @@ th, td {
   
  }
 }
+
 

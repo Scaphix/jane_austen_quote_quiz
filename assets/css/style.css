@@ -1,6 +1,6 @@
+/*General styling*/
 body {
     margin:0.5rem;
-   
     font-family: 'Playfair Display', serif;
     background-image: url("../images/background.png");
     max-height: 100vh;
@@ -19,6 +19,7 @@ body {
   max-width: 300px;
   text-align: center;
 }
+
 #title{
       font-family: 'Dancing Script', cursive;
       font-size: 1.5rem;
@@ -31,19 +32,16 @@ body {
       text-align: center;
       margin-bottom: 2rem;
      letter-spacing: 2px;
-
 }
-a {
-        text-decoration: none;
-    }
+
+
 h2 {
     font-family: 'Playfair Display', cursive;
     font-size: 1.5rem;
     padding-top: 2rem;
     color: #b76e79;
     text-align: center;
-
-        }
+   }
     
 p {
       margin:1rem;
@@ -52,11 +50,10 @@ p {
       color: #b76e79;
       background: #fffaf7;
       text-align: center;
-
-    }
+   }
 
 button {
-    display: block;
+      display: block;
       width: 100%;
       margin-bottom: 0.5rem;
       padding: 1rem;
@@ -69,17 +66,16 @@ button {
       cursor: pointer;
       }
 
-
-      /* SCREENS Show and hide */
+   /* To show and hide the screens */
 .screen {
   display: none;
-
 }
+
 .screen.active {
   display: block;
-
 }
 
+/*Name and player title inputs*/
 input, select {
  
       max-width: 100px;
@@ -94,6 +90,29 @@ input, select {
       cursor: pointer;
 }
 
+/* Change input field color */
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active{
+    -webkit-box-shadow: 0 0 0 30px #f3d6d6 inset !important;
+}
+
+  /* Error message  */
+.error-msg {
+  color: #e74c3c;   /* red */
+  font-size: 0.85em;
+  display: block;
+  margin-top: 4px;
+}
+
+
+/* Quiz screen*/
+
+a {
+        text-decoration: none;
+    }
+    
 .quote {
   font-style: italic;
   font-size: 1.5rem;
@@ -109,9 +128,11 @@ input, select {
   font-size: 2rem;
   color: #b76e79;
 }
+
 .options{
     padding: 0 1rem 1rem;
 }
+
 .options button {
   display: block;
   width: 100%;
@@ -146,6 +167,7 @@ input, select {
   transition: background-color 0.5s ease;
 }
 
+/* Score and question tracker*/
 .quiz-info p{
     margin:0;
 }
@@ -155,13 +177,7 @@ input, select {
   justify-content: space-between;
 }
 
-    /* Inline error message style */
-.error-msg {
-  color: #e74c3c;   /* red */
-  font-size: 0.85em;
-  display: block;
-  margin-top: 4px;
-}
+/* Mute buttons*/
 
 .mute-button button{
  display: block;
@@ -179,7 +195,9 @@ input, select {
    font-size: 1rem;
 }
 
-/* high score table*/
+
+/* High score screen*/
+
 table {
       margin: 0 auto;
       border-collapse: collapse;
@@ -199,6 +217,27 @@ table {
      font-size: 1rem;
     }
 
+    /*Error page 404*/
+
+body.centered {
+  display: flex;
+  margin: 0;
+  height: 100vh;
+  max-height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+#error-page .quiz-card{
+  justify-content: center;
+  width:100%
+}
+
+#error-page h1 {
+    color: #b76e79;
+     font-size: 3rem;
+}
+
 .button  {  
       margin-bottom: 0.5rem;
       padding: 1rem;
@@ -209,17 +248,10 @@ table {
 
 .button a {
  color: #4a3c3c;
-   font-size: 1rem;
-      cursor: pointer;
-}
-#error-page h1 {
-    color: #b76e79;
-     font-size: 3rem;
-}
-
-#error-page .quiz-card{
-  justify-content: center;
-  width:100%
+ font-size: 1rem;
+ cursor: pointer;
+ display: block;
+ width:100%;
 }
 
 
@@ -227,12 +259,13 @@ table {
 @media (min-width: 425px) {
   /* when we hit 500px and bigger, implement the styles below */
 
-  body {
+body {
    margin:2.5rem;
     max-height: 100vh;
     padding: 0;
     }
- .quiz-card {
+
+.quiz-card {
 
   max-width: 800px;
   width: 400px;
@@ -243,22 +276,22 @@ table {
     font-size: 2rem;
     padding:2rem;
     margin-bottom: 4rem;
-    
-    }
+      }
+
  h2, p {
     font-size: 2rem;
     padding:0;
     margin-bottom: 2rem;
     letter-spacing: 1px;
-    
-  }
+    }
+
 h1 {
     font-size: 3rem;
     margin:0;
     padding-top: 2rem;
   }
 
-  button{
+ button{
      margin: 0.5rem 0;
       padding: 0.8rem;
     font-size: 1.5rem;
@@ -273,47 +306,38 @@ h1 {
       margin-top: 1rem;
  }
 
-/* Change the white to any color */
-input:-webkit-autofill,
-input:-webkit-autofill:hover, 
-input:-webkit-autofill:focus, 
-input:-webkit-autofill:active{
-    -webkit-box-shadow: 0 0 0 30px #f3d6d6 inset !important;
-}
-
  #element {
     display:flex;
    justify-content: center;
    gap: 1.5rem;
-     
- }
+  }
+
 .quiz-info  {
   display: flex;
 flex-direction: row;
   justify-content: space-between;
 }
+
 .quiz-info p {
  font-size: 1.5rem;
  padding: 0 1rem;
 }
 
-th, td {
-      
+th, td {      
       padding: 0.5rem 1rem;
     }
 
-}
-
 .button a {
 
-   font-size: 1.5rem;
-    
+   font-size: 1.5rem;  
 }
+
 #error-page h1 {
 
      font-size: 5rem;
 }
 
+}
 
 @media (min-width: 768px) {
   /* when we hit 425px and bigger, implement the styles below */
@@ -324,11 +348,3 @@ th, td {
  }
 }
 
-body.centered {
-  display: flex;
-  margin: 0;
-  height: 100vh;
-  max-height: 100vh;
-  align-items: center;
-  justify-content: center;
-}

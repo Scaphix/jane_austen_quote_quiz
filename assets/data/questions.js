@@ -21,7 +21,47 @@ const quizData = [
     ],
     answer: "Pride and Prejudice",
   },
-
+{
+    quote:
+      "I could easily forgive his pride, if he had not mortified mine.",
+    options: ["Pride and Prejudice", "Persuasion", "Emma", "Sense and Sensibility"],
+    answer: "Pride and Prejudice",
+  },
+  {
+    quote:
+      "Vanity and pride are different things, though the words are often used synonymously.",
+    options: ["Sense and Sensibility", "Pride and Prejudice", "Persuasion", "Emma"],
+    answer: "Pride and Prejudice",
+  },
+  {
+    quote:
+      "She is tolerable, but not handsome enough to tempt me",
+    options: [
+      "Pride and Prejudice",
+      "Sense and Sensibility",
+      "Emma",
+      "Mansfield Park",
+    ],
+    answer: "Pride and Prejudice",
+  },
+  {
+    quote:
+    "You mistake me, my dear. I have a high respect for your nerves. They are my old friends. I have heard you mention them with consideration these twenty years at least.",
+    options: [
+      "Pride and Prejudice",
+      "Lady Susan",
+      "Sense and Sensibility",
+      "Mansfield Park",
+    ],
+    answer: "Pride and Prejudice",
+  },
+   {
+    quote:
+      "You are mistaken, Mr Darcy, if you suppose that the mode of your declaration affected me in any other way, than as it spared me the concern which I might have felt in refusing you, had you behaved in a more gentlemanlike manner.",
+    options: ["Emma", "Pride and Prejudice", "Sense and Sensibility", "Northanger Abbey"],
+    answer: "Pride and Prejudice",
+  },
+  
   // Sense and Sensibility
   {
     quote:
@@ -39,8 +79,25 @@ const quizData = [
     ],
     answer: "Sense and Sensibility",
   },
-
-  // Persuasion
+{
+    quote:
+      "If I could but know his heart, everything would become easy.",
+    options: ["Sense and Sensibility", "Pride and Prejudice", "Emma", "Persuasion"],
+    answer: "Sense and Sensibility",
+  },
+  {
+    quote:
+      "The more I know of the world, the more am I convinced that I shall never see a man whom I can really love.",
+    options: ["Emma", "Persuasion", "Sense and Sensibility", "Northanger Abbey"],
+    answer: "Sense and Sensibility",
+  },
+  {
+    quote:
+      "He was not handsome, and his manners required intimacy to make them pleasing. He was too diffident to do justice to himself; but when his natural shyness was overcome, his behaviour gave every indication of an open, affectionate heart.",
+    options: ["Mansfield", "Persuasion", "Sense and Sensibility", "Northanger Abbey"],
+    answer: "Sense and Sensibility",
+  },
+     // Persuasion
   {
     quote:
       "I can listen no longer in silence. I must speak to you by such means as are within my reach.",
@@ -63,7 +120,24 @@ const quizData = [
     options: ["Emma", "Sense and Sensibility", "Persuasion", "Pride and Prejudice" ],
     answer: "Persuasion",
   },
-
+  {
+    quote:
+      "All the privilege I claim for my own sex is that of loving longest, when existence or when hope is gone.",
+    options: ["Pride and Prejudice", "Emma", "Persuasion", "Mansfield Park"],
+    answer: "Persuasion",
+  },
+  {
+    quote:
+      "There could have been no two hearts so open, no tastes so similar, no feelings so in unison.",
+    options: ["Emma", "Northanger Abbey", "Persuasion", "Sense and Sensibility"],
+    answer: "Persuasion",
+  },
+    {
+    quote:
+      "A man does not recover from such devotion of the heart to such a woman! He ought not; he does not.",
+    options: ["Persuasion", "Sense and Sensibility", "Emma", "Pride and Prejudice"],
+    answer: "Persuasion",
+  },
   // Emma
   {
     quote:
@@ -82,7 +156,30 @@ const quizData = [
     options: ["Emma", "Persuasion", "Northanger Abbey", "Mansfield Park"],
     answer: "Emma",
   },
-
+ {
+    quote:
+      "There is no charm equal to tenderness of heart.",
+    options: ["Emma", "Pride and Prejudice", "Mansfield Park", "Northanger Abbey"],
+    answer: "Emma",
+  },
+  {
+    quote:
+      "One half of the world cannot understand the enjoyments of the other.",
+    options: ["Persuasion", "Sense and Sensibility", "Emma", "Pride and Prejudice"],
+    answer: "Emma",
+  },
+  {
+    quote:
+      "If I loved you less, I might be able to talk about it more.",
+    options: ["Emma", "Mansfield Park", "Pride and Prejudice", "Persuasion"],
+    answer: "Emma",
+  },
+  {
+    quote:
+      "There are people, who the more you do for them, the less they will do for themselves.",
+    options: ["Mansfield Park", "Emma", "Persuasion", "Sense and Sensibility"],
+    answer: "Emma",
+  },
   // Mansfield Park
   {
     quote: "A large income is the best recipe for happiness I ever heard of.",
@@ -100,7 +197,30 @@ const quizData = [
     ],
     answer: "Mansfield Park",
   },
-
+{
+    quote:
+      "Selfishness is one long proof of a man's being completely satisfied with himself.",
+    options: ["Mansfield Park", "Emma", "Persuasion", "Sense and Sensibility"],
+    answer: "Mansfield Park",
+  },
+  {
+    quote:
+      "A fondness for reading, properly directed, must be an education in itself.",
+    options: ["Mansfield Park", "Northanger Abbey", "Pride and Prejudice", "Emma"],
+    answer: "Mansfield Park",
+  },
+    {
+    quote:
+      "Her own thoughts and reflections were habitually her best companions.",
+    options: ["Lady Susan", "Mansfield Park", "Emma", "Persuasion"],
+    answer: "Mansfield Park",
+  },
+   {
+    quote:
+      "Let us have the luxury of silence.",
+    options: ["Lady Susan", "Mansfield Park", "Emma", "Persuasion"],
+    answer: "Mansfield Park",
+  },
   // Northanger Abbey
   {
     quote:
@@ -124,29 +244,53 @@ const quizData = [
     ],
     answer: "Northanger Abbey",
   },
-
-  // Extra quotes (Lady Susan + general wisdom)
+ {
+    quote:
+      "A woman, especially if she has the misfortune of knowing anything, should conceal it as well as she can.",
+    options: ["Northanger Abbey", "Sense and Sensibility", "Persuasion", "Emma"],
+    answer: "Northanger Abbey",
+  },
+  {
+    quote:
+      "No man is offended by another man's admiration of the woman he loves; it is the woman only who can make it a torment.",
+    options: ["Emma", "Persuasion", "Northanger Abbey", "Mansfield Park"],
+    answer: "Northanger Abbey",
+  },
+   {
+    quote:
+      "The person, be it gentleman or lady, who has not pleasure in a good novel, must be intolerably stupid.",
+    options: [
+      "Mansfield Park",
+      "Sense and Sensibility",
+      "Emma",
+      "Northanger Abbey",
+    ],
+    answer: "Northanger Abbey",
+  },
+  {
+    quote:
+      "I shall not pay them any such compliment, I assure you. I have no notion of treating men with such respect. That is the way to spoil them.",
+    options: ["Emma", "Persuasion", "Northanger Abbey", "Mansfield Park"],
+    answer: "Northanger Abbey",
+  },
+  // Lady Susan 
   {
     quote:
       "Where youth and diffidence are united, it requires uncommon steadiness of reason to resist the attraction of being called the most charming girl in the world.",
     options: ["Lady Susan", "Mansfield Park", "Emma", "Persuasion"],
     answer: "Lady Susan",
   },
-  {
+   {
     quote:
-      "Selfishness must always be forgiven you know, because there is no hope of a cure.",
-    options: [
-      "Pride and Prejudice",
-      "Sense and Sensibility",
-      "Emma",
-      "Mansfield Park",
-    ],
-    answer: "Pride and Prejudice",
+      "I am tired of submitting my will to the caprices of others—of resigning my own judgement in deference to those to whom I owe no duty, and for whom I feel no respect.",
+    options: ["Lady Susan", "Pride and Prejudice", "Emma", "Persuasion"],
+    answer: "Lady Susan",
   },
   {
     quote:
-      "One half of the world cannot understand the pleasures of the other.",
-    options: ["Emma", "Mansfield Park", "Pride and Prejudice", "Persuasion"],
-    answer: "Emma",
+      "There is exquisite pleasure in subduing an insolent spirit.",
+    options: ["Lady Susan", "Mansfield Park", "Emma", "Northanger Abbey"],
+    answer: "Lady Susan",
   }
+  
 ];

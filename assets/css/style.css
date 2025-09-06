@@ -42,8 +42,8 @@ h2 {
     padding-top: 2rem;
     color: #b76e79;
     text-align: center;
-    
-    }
+
+        }
     
 p {
       margin:1rem;
@@ -197,7 +197,30 @@ table {
     th {
      font-size: 1rem;
     }
-   
+
+.button  {  
+      margin-bottom: 0.5rem;
+      padding: 1rem;
+      border: none;
+      border-radius: 12px;
+      background-color: #f3d6d6;
+}
+
+.button a {
+ color: #4a3c3c;
+   font-size: 1rem;
+      cursor: pointer;
+}
+#error-page h1 {
+    color: #b76e79;
+     font-size: 3rem;
+}
+
+#error-page .quiz-card{
+  justify-content: center;
+  width:100%
+}
+
 
 /* RESPONSIVE DESIGN */
 @media (min-width: 425px) {
@@ -284,6 +307,17 @@ th, td {
     }
 
 }
+
+.button a {
+
+   font-size: 1.5rem;
+    
+}
+#error-page h1 {
+
+     font-size: 5rem;
+}
+
 
 @media (min-width: 768px) {
   /* when we hit 425px and bigger, implement the styles below */

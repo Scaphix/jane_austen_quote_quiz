@@ -257,7 +257,7 @@ body.centered {
 
 /* RESPONSIVE DESIGN */
 @media (min-width: 425px) {
-  /* when we hit 500px and bigger, implement the styles below */
+  /* for screens of 425px and bigger */
 
 body {
    margin:2.5rem;
@@ -340,7 +340,7 @@ th, td {
 }
 
 @media (min-width: 768px) {
-  /* when we hit 425px and bigger, implement the styles below */
+  /* for screens of 768px and bigger */
 
  .quiz-card {
   width: 700px;
